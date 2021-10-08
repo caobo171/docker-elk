@@ -43,5 +43,11 @@ services:
 networks:
   elasticsearch_elk:
      external: true
+
 volumes:
   elasticsearch:
+      driver: local
+      driver_opts:
+        o: bind
+        type: none
+        device: /home/oem/Documents/elk-data
